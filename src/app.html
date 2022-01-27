@@ -1,0 +1,259 @@
+<template>
+	<div style="min-width: 1010px;">
+		<lightning-tabset>
+			<lightning-tab label="Proposals">
+				<c-proposal-list-view></c-proposal-list-view>
+			</lightning-tab>
+			<lightning-tab label="Due Diligence">
+				<c-diligence-list-view></c-diligence-list-view>
+			</lightning-tab>
+		</lightning-tabset>
+	</div>
+	<!-- <div class="parent">
+		<div class="div1 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom"></div>
+		<div class="div2 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">Proposal ID</div>
+		<div class="div3 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">PI</div>
+		<div class="div4 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">Proposal Title
+		</div>
+		<div class="div5 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">Review Status
+		</div>
+		<div class="div6 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">PD</div>
+		<div class="div7 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">PD Last Update
+		</div>
+		<div class="div8 slds-text-heading_small slds-text-title_bold slds-border_top slds-border_bottom">Determination
+		</div>
+
+		<div class="div9 slds-border_bottom"> <template if:true={expanded}>
+				<lightning-button-icon icon-name="utility:chevrondown" variant="bare" alternative-text="Collapse"
+					onclick={handleCollapseView}>
+				</lightning-button-icon>
+			</template>
+			<template if:false={expanded}>
+				<lightning-button-icon icon-name="utility:chevronright" variant="bare" alternative-text="Expand"
+					onclick={handleExpandView}>
+				</lightning-button-icon>
+			</template>
+		</div>
+		<div class="div10 slds-border_bottom"> P222121</div>
+		<div class="div11 slds-border_bottom"> Christine Roth</div>
+		<div class="div12 slds-border_bottom"> Deep Tech Innovation</div>
+		<div class="div13 slds-border_bottom"> Review Package Complete</div>
+		<div class="div14 slds-border_bottom"> Faith Cantu</div>
+		<div class="div15 slds-border_bottom"> 01-24-2022</div>
+		<div class="div16 slds-border_bottom"> Not Initiated</div>
+		<template if:true={expanded}>
+			<div class="div41 slds-border_bottom"></div>
+		</template>
+
+		<div class="div17 slds-border_bottom"> <template if:true={expanded}>
+				<lightning-button-icon icon-name="utility:chevrondown" variant="bare" alternative-text="Collapse"
+					onclick={handleCollapseView}>
+				</lightning-button-icon>
+			</template>
+			<template if:false={expanded}>
+				<lightning-button-icon icon-name="utility:chevronright" variant="bare" alternative-text="Expand"
+					onclick={handleExpandView}>
+				</lightning-button-icon>
+			</template>
+		</div>
+		<div class="div18 slds-border_bottom"> P222122</div>
+		<div class="div19 slds-border_bottom"> Zephania Petersen</div>
+		<div class="div20 slds-border_bottom"> Nanotechnology Innovation</div>
+		<div class="div21 slds-border_bottom"> Review Package Complete</div>
+		<div class="div22 slds-border_bottom"> Briar Woods</div>
+		<div class="div23 slds-border_bottom"> 01-24-2022</div>
+		<div class="div24 slds-border_bottom"> Hold</div>
+		<template if:true={expanded}>
+			<div class="div42 slds-border_bottom"></div>
+		</template>
+
+
+		<div class="div25 slds-border_bottom"> <template if:true={expanded}>
+				<lightning-button-icon icon-name="utility:chevrondown" variant="bare" alternative-text="Collapse"
+					onclick={handleCollapseView}>
+				</lightning-button-icon>
+			</template>
+			<template if:false={expanded}>
+				<lightning-button-icon icon-name="utility:chevronright" variant="bare" alternative-text="Expand"
+					onclick={handleExpandView}>
+				</lightning-button-icon>
+			</template>
+		</div>
+		<div class="div26 slds-border_bottom"> P222123</div>
+		<div class="div27 slds-border_bottom"> Steven Ingram</div>
+		<div class="div28 slds-border_bottom"> Advanced Electromagnetic Innovation</div>
+		<div class="div29 slds-border_bottom"> Review Package Complete</div>
+		<div class="div30 slds-border_bottom"> Bianca Russell</div>
+		<div class="div31 slds-border_bottom"> 01-24-2022</div>
+		<div class="div32 slds-border_bottom"> Award</div>
+		<template if:true={expanded}>
+			<div class="div43 slds-border_bottom"></div>
+		</template>
+
+		<div class="div33 slds-border_bottom"> <template if:true={expanded}>
+				<lightning-button-icon icon-name="utility:chevrondown" variant="bare" alternative-text="Collapse"
+					onclick={handleCollapseView}>
+				</lightning-button-icon>
+			</template>
+			<template if:false={expanded}>
+				<lightning-button-icon icon-name="utility:chevronright" variant="bare" alternative-text="Expand"
+					onclick={handleExpandView}>
+				</lightning-button-icon>
+			</template>
+		</div>
+		<div class="div34"> P222124</div>
+		<div class="div35"> Tad Moreno</div>
+		<div class="div36"> Advanced Manufacturing Innovation</div>
+		<div class="div37"> Review Package Complete</div>
+		<div class="div38"> Olga Bolton</div>
+		<div class="div39"> 01-24-2022</div>
+		<div class="div40"> Decline</div>
+		<template if:true={expanded}>
+			<div class="div44 slds-border_bottom">
+				<lightning-layout pull-to-boundary="medium" multiple-rows="true">
+					<lightning-layout-item padding="horizontal-medium" size="12" small-device-size="12" medium-device-size="6"
+						large-device-size="6">
+						<div>
+							<lightning-layout class="slds-m-top_small slds-p-bottom_small" horizontal-align="spread"
+								vertical-align="center">
+								<div class="slds-text-heading_small">
+									<div class="slds-text-heading_medium" title="Diligence Detail">Diligence Detail</div>
+								</div>
+								<lightning-layout>
+									<lightning-layout-item flexibility="auto" padding="horizontal-small">
+										<lightning-button label="Action" title="Neutral action" variant="neutral" icon-position="left"
+											type="button"></lightning-button>
+									</lightning-layout-item>
+									<lightning-button-icon class="slds-m-right_x-small" alternative-text="" variant="border-filled"
+										type="button" icon-name="utility:refresh" size="medium"></lightning-button-icon>
+									<lightning-button-icon class="slds-m-right_x-small" alternative-text="" variant="border-filled"
+										type="button" icon-name="utility:filterList" size="medium"></lightning-button-icon>
+								</lightning-layout>
+							</lightning-layout>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+				<lightning-layout>
+					<lightning-layout-item alignment-bump="right" size="4">
+						<div class="slds-text-heading_small slds-p-left_large" style="text-align: right;">PD Action</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="3">
+						<div class="slds-text-heading_small">PI Action</div>
+					</lightning-layout-item>
+				</lightning-layout>
+				<div class="slds-media slds-timeline__item_expandable slds-timeline__item_task">
+					<div class="slds-media__figure">
+						<lightning-icon class="slds-m-left_large slds-timeline__icon" icon-name="standard:task" size="small"
+							variant="inverse"></lightning-icon>
+					</div>
+					<div class="slds-media__body">
+						<lightning-layout horizontal-align="spread" vertical-align="center">
+							<lightning-layout-item size="5">
+								<lightning-layout vertical-align="center">
+									<lightning-layout-item><a target="_blank" class="slds-text-link" href="">Diligence Documents
+											Initiated</a>
+									</lightning-layout-item>
+								</lightning-layout>
+							</lightning-layout-item>
+							<lightning-layout-item alignment-bump="right" size="2" small-device-size="2" medium-device-size="2"
+								large-device-size="2">
+								<div class="slds-timeline__actions slds-timeline__actions_inline">
+									<div class="slds-timeline__date" style="font-size: 0.8125rem;">09:00am | 3/20/17</div>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+					</div>
+				</div>
+				<div class="slds-media slds-timeline__item_expandable slds-timeline__item_task">
+					<div class="slds-media__figure">
+						<lightning-icon class="slds-m-left_large slds-timeline__icon" icon-name="standard:task2" size="small"
+							variant="inverse"></lightning-icon>
+					</div>
+					<div class="slds-media__body">
+						<lightning-layout horizontal-align="spread" vertical-align="center">
+							<lightning-layout-item alignment-bump="left" size="2" small-device-size="2" medium-device-size="2"
+								large-device-size="2">
+								<div class="slds-timeline__actions slds-timeline__actions_inline">
+									<div class="slds-timeline__date" style="font-size: 0.8125rem;">10:00am | 3/22/17</div>
+								</div>
+							</lightning-layout-item>
+							<lightning-layout-item size="5"><a target="_blank" class="slds-text-link" href="">Package Receipt
+									Acknowledged</a></lightning-layout-item>
+						</lightning-layout>
+					</div>
+				</div>
+				<div class="slds-media slds-timeline__item_expandable slds-timeline__item_event">
+					<div class="slds-media__figure">
+						<lightning-icon class="slds-m-left_large slds-timeline__icon" icon-name="standard:event" size="small"
+							variant="inverse"></lightning-icon>
+					</div>
+					<div class="slds-media__body">
+						<lightning-layout horizontal-align="spread" vertical-align="center">
+							<lightning-layout-item size="5"><a target="_blank" class="slds-text-link" href="">PD Questions
+									Reviewed/Follow-up Sent</a></lightning-layout-item>
+							<lightning-layout-item size="2">
+								<div class="slds-timeline__actions slds-timeline__actions_inline">
+									<div class="slds-text-body_regular">12:00pm | 4/01/2017</div>
+								</div>
+							</lightning-layout-item>
+							<lightning-layout-item size="5" padding="horizontal-large">
+								<lightning-button label="Send Reminder" title="Neutral action" icon-position="left" type="button"
+									icon-name="utility:send" variant="brand" disabled></lightning-button>
+							</lightning-layout-item>
+						</lightning-layout>
+					</div>
+				</div>
+				<div class="slds-media slds-timeline__item_expandable slds-timeline__item_event">
+					<div class="slds-media__figure">
+						<lightning-icon class="slds-m-left_large slds-timeline__icon" icon-name="standard:announcement" size="small"
+							variant="inverse"></lightning-icon>
+					</div>
+					<div class="slds-media__body">
+						<lightning-layout horizontal-align="spread" vertical-align="center">
+							<lightning-layout-item size="5"><a target="_blank" class="slds-text-link" href="">Reminder Sent</a>
+							</lightning-layout-item>
+							<lightning-layout-item size="2" alignment-bump="right">
+								<div class="slds-timeline__actions slds-timeline__actions_inline">
+									<div class="slds-text-body_regular">12:05pm | 4/01/2017</div>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+					</div>
+				</div>
+				<div class="slds-media slds-timeline__item_expandable slds-timeline__item_event">
+					<div class="slds-media__figure">
+						<lightning-icon class="slds-m-left_large slds-timeline__icon" icon-name="standard:event" size="small"
+							variant="inverse"></lightning-icon>
+					</div>
+					<div class="slds-media__body">
+						<lightning-layout horizontal-align="spread" vertical-align="center">
+							<lightning-layout-item size="5"><a target="_blank" class="slds-text-link" href="">PD Questions
+									Reviewed/Follow-up Sent</a></lightning-layout-item>
+							<lightning-layout-item size="2" alignment-bump="right">
+								<div class="slds-timeline__actions slds-timeline__actions_inline">
+									<div class="slds-text-body_regular">12:10pm | 4/01/2017</div>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+					</div>
+				</div>
+				<div class="slds-media slds-timeline__item_expandable slds-timeline__item_event">
+					<div class="slds-media__figure">
+						<lightning-icon class="slds-m-left_large slds-timeline__icon" icon-name="standard:apex" size="small"
+							variant="inverse"></lightning-icon>
+					</div>
+					<div class="slds-media__body">
+						<lightning-layout horizontal-align="spread" vertical-align="center">
+							<lightning-layout-item size="5"><a target="_blank" class="slds-text-link" href=""></a>
+							</lightning-layout-item>
+							<lightning-layout-item size="2">
+								<div class="slds-timeline__actions slds-timeline__actions_inline"></div>
+							</lightning-layout-item>
+							<lightning-layout-item size="5" padding="horizontal-large"></lightning-layout-item>
+						</lightning-layout>
+					</div>
+				</div>
+			</div>
+		</template>
+	</div> -->
+</template>

@@ -1,0 +1,16 @@
+{
+  "modules": [
+    {
+      "npm": "lightning-base-components"
+    },
+    {
+      "dir": "src"
+    },
+    {
+      "npm": "@avonni/base-components"
+    },
+    {
+      "dir": "src"
+    }
+  ]
+}
