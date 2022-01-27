@@ -5,12 +5,6 @@
     },
     {
       "dir": "src"
-    },
-    {
-      "npm": "@avonni/base-components"
-    },
-    {
-      "dir": "src"
     }
   ]
 }
